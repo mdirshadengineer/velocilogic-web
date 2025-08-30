@@ -1,6 +1,6 @@
-import reportList from "./functions/report-list";
-import WorkflowList from "./functions/workflow-list";
+import reportList from './functions/report-list';
+import WorkflowList from './functions/workflow-list';
 
 export const functions = [WorkflowList, reportList];
 
-export { inngest } from "./client";
+export { inngest } from './client';

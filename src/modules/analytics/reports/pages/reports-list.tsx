@@ -2,12 +2,21 @@
 
 import { Report } from '@prisma/client';
 import { format } from 'date-fns';
-import { AreaChart, BarChart, Calendar, Edit3, LineChart, PieChart, Plus, Trash2 } from 'lucide-react';
+import {
+  AreaChart,
+  BarChart,
+  Calendar,
+  Edit3,
+  LineChart,
+  PieChart,
+  Plus,
+  Trash2,
+} from 'lucide-react';
 import Link from 'next/link';
 
-import React, { useEffect, useState } from 'react';
 import { CreateFormButton } from '../components/ui/create-report-form';
 
+import React, { useEffect, useState } from 'react';
 
 const ReportsList: React.FC = () => {
   const [reports, setReports] = useState<Report[]>([]);
@@ -41,17 +50,29 @@ const ReportsList: React.FC = () => {
   const getChartIcon = (chartType: string) => {
     switch (chartType) {
       case 'bar':
-        return <BarChart className="h-6 w-6 text-indigo-500 dark:text-indigo-400" />;
+        return (
+          <BarChart className="h-6 w-6 text-indigo-500 dark:text-indigo-400" />
+        );
       case 'pie':
-        return <PieChart className="h-6 w-6 text-pink-500 dark:text-pink-400" />;
+        return (
+          <PieChart className="h-6 w-6 text-pink-500 dark:text-pink-400" />
+        );
       case 'line':
-        return <LineChart className="h-6 w-6 text-green-500 dark:text-green-400" />;
+        return (
+          <LineChart className="h-6 w-6 text-green-500 dark:text-green-400" />
+        );
       case 'area':
-        return <AreaChart className="h-6 w-6 text-blue-500 dark:text-blue-400" />;
+        return (
+          <AreaChart className="h-6 w-6 text-blue-500 dark:text-blue-400" />
+        );
       case 'calendar':
-        return <Calendar className="h-6 w-6 text-yellow-500 dark:text-yellow-400" />;
+        return (
+          <Calendar className="h-6 w-6 text-yellow-500 dark:text-yellow-400" />
+        );
       default:
-        return <BarChart className="h-6 w-6 text-indigo-500 dark:text-indigo-400" />;
+        return (
+          <BarChart className="h-6 w-6 text-indigo-500 dark:text-indigo-400" />
+        );
     }
   };
 
@@ -65,7 +86,7 @@ const ReportsList: React.FC = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mb-8 flex flex-col gap-4 items-start justify-between sm:flex-row sm:items-center">
+      <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <div>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
             Reports Dashboard
@@ -105,7 +126,8 @@ const ReportsList: React.FC = () => {
                       typeof report.definition === 'object' &&
                         report.definition !== null &&
                         'chartType' in report.definition
-                        ? (report.definition as { chartType?: string }).chartType || ''
+                        ? (report.definition as { chartType?: string })
+                            .chartType || ''
                         : ''
                     )}
                     <div>

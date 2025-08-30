@@ -8,6 +8,7 @@ import {
 } from 'shared/ui/breadcrumb';
 import { Separator } from 'shared/ui/separator';
 import { SidebarTrigger } from 'shared/ui/sidebar';
+
 import { SearchForm } from './search-form';
 
 function VelociLogicAppHeader() {
@@ -19,7 +20,7 @@ function VelociLogicAppHeader() {
           orientation="vertical"
           className="mr-2 data-[orientation=vertical]:h-4"
         />
-        <Breadcrumb className='hidden md:flex'>
+        <Breadcrumb className="hidden md:flex">
           <BreadcrumbList>
             <BreadcrumbItem className="hidden lg:block">
               <BreadcrumbLink href="#">

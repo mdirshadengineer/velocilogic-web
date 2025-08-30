@@ -1,6 +1,6 @@
 import { SidebarInset, SidebarProvider } from 'shared/ui/sidebar';
-
 import { VelociLogicAppSidebar } from 'src/app/(main)/(app)/_components/sidebar/app-sidebar';
+
 import { VelociLogicAppHeader } from './_components/header/app-header';
 
 export default function VelociLogicAppLayout({

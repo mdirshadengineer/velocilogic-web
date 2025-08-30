@@ -1,4 +1,5 @@
 import { prisma } from 'src/lib/db/prisma';
+
 import { inngest } from '../client';
 
 export default inngest.createFunction(
@@ -7,7 +8,6 @@ export default inngest.createFunction(
   },
   { event: 'velocilogic-reportlist/event.sent' },
   async ({ event, step }) => {
-
     // Fetch all reports from the database
     const reports = await prisma.report.findMany();
 

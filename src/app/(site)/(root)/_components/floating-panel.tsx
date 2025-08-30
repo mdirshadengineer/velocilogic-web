@@ -140,6 +140,7 @@ export function FloatingPanel() {
             <CommandItem
               onSelect={() => {
                 speakVoiceMessage('Initiating Demo Environment');
+                setOpen(false);
                 // route to /demo page
                 router.push('/demo');
               }}

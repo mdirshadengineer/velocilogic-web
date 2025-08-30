@@ -12,7 +12,7 @@ import {
   navigationMenuTriggerStyle,
 } from 'shared/ui/navigation-menu';
 
-import * as React from 'react';
+import React from 'react';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -57,7 +57,7 @@ export function NavigationMenuDemo() {
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">
+          <NavigationMenuTrigger className="!bg-transparent">
             Home
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -90,7 +90,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">
+          <NavigationMenuTrigger className="!bg-transparent">
             Components
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -112,11 +112,11 @@ export function NavigationMenuDemo() {
             asChild
             className={navigationMenuTriggerStyle() + ' bg-transparent'}
           >
-            <Link href="/docs">Docs</Link>
+            <Link href="/app">Docs</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">
+          <NavigationMenuTrigger className="!bg-transparent">
             List
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -169,7 +169,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem> */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">
+          <NavigationMenuTrigger className="!bg-transparent">
             With Icon
           </NavigationMenuTrigger>
           <NavigationMenuContent>
